@@ -256,20 +256,37 @@ section {
 }
 
 .about .fn-logo {
-  position: relative;
-  width: 300px;
-  height: 100px;
+  /* position: relative; */
+  /* width: 300px; */
+  /* height: 100px; */
   margin: 10px 0 10px 0px;
   /* padding: 10px 10px 10px 0; */
 }
 
 .about .fn-logo img {
-  position: absolute;
-  top: 0px;
+  /* position: absolute; */
+  /* top: 0px; */
   /* width: 400px; */
   /* left: 50%; */
   /* width: 50%; */
   /* height: 100%; */
+}
+
+@media (max-width: 735px) {
+  .about .content {
+    /* display: flex; */
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .about .content div.content,
+  .about .content .image {
+    /* flex-direction: column; */
+    /* margin: 0 48px 48px 0px; */
+    width: 400px;
+    margin: 0;
+  }
 }
 
 /*   --      ----------------about end----------   --      */
