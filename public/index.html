@@ -63,6 +63,8 @@
 </header>
 
 
+
+<!--------------   about section   -------------->
 <section class="about" id="about">
   
   <div class="content">
@@ -76,82 +78,109 @@
     <div class="image">
       <img src="./KA_BrandingGradient.png">
     </div>
+
+    <a href="#portfolio" class="js-scroll scroll-to scroll-to-intro"></a>
   </div>
-  <a href="#portfolio" class="js-scroll scroll-to scroll-to-intro"></a>
+  
 
 </section>
+<!--------------   about section   END-------------->
 
-<div class="w-100 bg-yellow">
-  <div class="w-200 h-100 conveyor flex items-stretch">
-        <div class="w-25 h-100 bg-red box"></div>
-        <div class="w-25 h-100 bg-purple box"></div>
-        <div class="w-25 h-100 bg-yellow box"></div>
-        <div class="w-25 h-100 bg-blue box"></div>
-        <div class="w-25 h-100 bg-red box"></div>
-        <div class="w-25 h-100 bg-purple box"></div>
-        <div class="w-25 h-100 bg-yellow box"></div>
-        <div class="w-25 h-100 bg-blue box"></div>
-      </div>
-</div>
 
+<!--------------  portfolio section   -------------->
 <section class="portfolio" id="portfolio">
   <h1>
     Portfolio
   </h1>
+
   <nav class="filters">
-  <div class="container">
-    <a href="#" class="show-filters">Languages</a>
-    <ul class="filters-list">
-      <li>
-        <a href="#" class="selected" data-filter=".language">All</a>
-      </li>
-      <li>
-        <a href="#" data-filter=".html">HTML</a>
-      </li>
-      <li> 
-        <a href="#" data-filter=".css">CSS</a> 
-      </li>
-      <li>
-        <a href="#" data-filter=".react">React</a>
-      </li>  
-      <li>
-        <a href="#" data-filter=".rubyonrails">Ruby on Rails</a>
-      </li> 
-      <li>
-        <a href="#" data-filter=".sql">SQL</a>
-      </li> 
+    <div class="container">
+      <a href="#" class="show-filters">Languages</a>
+      <ul class="filters-list" id="filters-list">
+        <li>
+          <a href="#" class="selected" data-filter=".language">All</a>
+        </li>
+        <li>
+          <a href="#" data-filter=".html">HTML</a>
+        </li>
+        <li> 
+          <a href="#" data-filter=".css">CSS</a> 
+        </li>
+        <li>
+          <a href="#" data-filter=".javascript">Javascript</a>
+        </li>
+        <li>
+          <a href="#" data-filter=".react">React</a>
+        </li>  
+        <li>
+          <a href="#" data-filter=".rubyonrails">Ruby on Rails</a>
+        </li> 
+        <li>
+          <a href="#" data-filter=".sql">SQL</a>
+        </li> 
 
-    </ul>
-    
-  </div>
-</nav>
+      </ul>
+      
+    </div>
+  </nav>
   
-
-
 
 
   <div class="w-100 h-50 bg-yellow conveyor-belt overflow-hidden box">
       <!--    our inner element is 2x the width and scrolls from right to left like a film strip    -->
       <div class="w-200 h-100 conveyor flex items-stretch">
-        <div class="w-25 h-100 bg-red box">box1</div>
-        <div class="w-25 h-100 bg-purple box"></div>
-        <div class="w-25 h-100 bg-yellow box"></div>
-        <div class="w-25 h-100 bg-blue box"></div>
+
+        <div class="project html css javascript w-25 h-100 bg-red box">
+          <a class="project_item" href="https://essmei-1540.superhi.com/" target="_blank" value="html css javascript">
+              <h2 class="project_title">ESSMEI</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+          </a>
+          
+        </div>
+
+        <div class="project javascript w-25 h-100 bg-purple box">
+          <a class="project_item" href="https://boyce-slideshow-632.superhi.com/" target="_blank" value="javascript">
+            
+              <h2 class="project_title">Boyce Slideshow</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            
+          </a>
+        </div>
+
+        <div class="project css javascript w-25 h-100 bg-yellow box">
+          <a class="project_item" href="https://type-checker-475.superhi.com/" target="_blank" value=" css javascript">
+              <h2 class="project_title">Type Checker</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+          </a>
+
+        </div>
+
+        <div class="w-25 h-100 bg-blue box">
+          <a class="project_item" href="https://brux-377.superhi.com/" target="_blank" value="html css javascript">
+              <h2 class="project_title">Brux</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+          </a>
+        </div>
         <div class="w-25 h-100 bg-red box"></div>
         <div class="w-25 h-100 bg-purple box"></div>
         <div class="w-25 h-100 bg-yellow box"></div>
         <div class="w-25 h-100 bg-blue box"></div>
       </div>
-    </div>
 
-  
+    </div>  
+  </div>
 
-  
-</div>
+  <div class="svg-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244.34 137.57"><text style="font-family:Galvji-Bold,Galvji;font-size:55.24px;font-weight:700" transform="translate(194.33 122.2)"><tspan x="0" y="0">{}</tspan></text><path d="M89.73 131.75H59.9L32.07 93.02l-6.92 7.09v31.64H0V0h25.15v73.66h1.56l31.9-37.26h28.61L50.91 77.29l38.82 54.46zM173.7 53.04c-1.75-4.01-4.31-7.39-7.65-10.16-3.34-2.76-7.47-4.88-12.4-6.35-4.93-1.47-10.54-2.21-16.82-2.21s-11.45.67-16.38 1.99c-4.93 1.33-9.2 3.24-12.84 5.75-3.63 2.51-6.52 5.53-8.68 9.08-2.16 3.54-3.45 7.51-3.85 11.88h23.17c1.03-2.88 3.02-5.07 5.96-6.57 2.94-1.49 6.69-2.24 11.24-2.24 5.24 0 9.24 1.08 11.97 3.24 2.74 2.16 4.11 5.23 4.11 9.2v7.79l-23.08 1.38c-11.93.69-21.07 3.47-27.4 8.34-6.35 4.87-9.51 11.66-9.51 20.36 0 4.38.76 8.33 2.29 11.84 1.52 3.52 3.67 6.53 6.44 9.04 2.76 2.5 6.05 4.43 9.85 5.79 3.81 1.35 8.01 2.03 12.62 2.03 6.23 0 11.77-1.23 16.64-3.67 4.87-2.45 8.55-5.87 11.03-10.25h1.55v12.45h24.38v-65.1c0-5.07-.88-9.6-2.64-13.61Zm-22.17 44.13c0 2.42-.52 4.67-1.56 6.74-1.03 2.08-2.48 3.89-4.32 5.45-1.84 1.56-4.01 2.77-6.48 3.63-2.48.87-5.19 1.3-8.13 1.3-4.38 0-7.95-1.01-10.72-3.03-2.76-2.01-4.15-4.81-4.15-8.38 0-6.92 5.36-10.75 16.08-11.5l19.28-1.21v7Z"/></svg>
+  </div>
   <a href="#contact" class="js-scroll scroll-to scroll-to-intro"></a>
 </section>
+<!--------------   portfolio section   END-------------->
 
 
+
+
+<!--------------   contact section   -------------->
 <section class="contact" id="contact">
   <div class="marquee">
     <span>Get in Touch</span>
@@ -168,7 +197,7 @@
         <!-- <label>email</label> -->
         </div>
         <div class="app-form-group">
-          <input type="message" name="message" placeholder="drop me a note..." required />
+          <input type="message" name="message" placeholder=" drop me a note..." required />
         <!-- <label>message</label> -->
         </div>
         <button id="my-form-button">SUBMIT</button>       
@@ -200,7 +229,7 @@
   
 
 </section>
-
+<!--------------   contact section   END-------------->
 
   </body>
 </html>

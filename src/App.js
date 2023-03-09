@@ -122,3 +122,40 @@ async function handleSubmit(event) {
 form.addEventListener("submit", handleSubmit);
 
 // portfolio animations
+
+//filter animations
+//const projectFilter = document.querySelector(".filters-list a");
+// const toggleFilter = function () {
+//   const filter = $(this).attr("data-filter");
+// };
+
+// toggleFilter();
+
+// document.addEventListener("click", function () {
+//   toggleFilter();
+// });
+
+const filterLanguages = document.querySelectorAll(".filters-list a");
+
+filterLanguages.forEach((language) => {
+  filterLanguages.addEventListerner("click", function (event) {
+    event.preventDefault();
+
+    const filter = language.getAttribute("data-filter");
+
+    const projects = document.querySelectorAll(".project");
+    projects.forEach((project) => {
+      projects.style.display = "none";
+    });
+
+    const selectedProjects = document.querySelectorAll(filter);
+    selectedProjects.forEach((project) => {
+      project.style.display = "block";
+    });
+
+    filterLanguages.forEach((language) => {
+      language.classList.remove("selected");
+    });
+    language.classList.add("selected");
+  });
+});
