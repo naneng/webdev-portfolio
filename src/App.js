@@ -138,19 +138,23 @@ form.addEventListener("submit", handleSubmit);
 const filterLanguages = document.querySelectorAll(".filters-list a");
 
 filterLanguages.forEach((language) => {
-  filterLanguages.addEventListerner("click", function (event) {
+  language.addEventListener("click", function (event) {
     event.preventDefault();
 
     const filter = language.getAttribute("data-filter");
 
     const projects = document.querySelectorAll(".project");
     projects.forEach((project) => {
-      projects.style.display = "none";
+      project.style.display = "none";
     });
 
     const selectedProjects = document.querySelectorAll(filter);
     selectedProjects.forEach((project) => {
       project.style.display = "block";
+
+      // if (selectedProjects.length < 1) {
+      //   project.style.display = "none";
+      // }
     });
 
     filterLanguages.forEach((language) => {
@@ -158,4 +162,6 @@ filterLanguages.forEach((language) => {
     });
     language.classList.add("selected");
   });
+
+  // return false;
 });
