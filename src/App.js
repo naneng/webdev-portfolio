@@ -33,7 +33,7 @@ function makeMarquee() {
   // const img = document.createElement("img")
   // img.src = "hoagie-1.png"
   // document.getElementById("text-breaker").appendChild(img);
-  const marqueeText = new Array(100).fill(title).join(" ");
+  const marqueeText = new Array(100).fill(title).join("<{><}> ");
 
   const marquee = document.querySelector(".marquee span");
   marquee.innerHTML = marqueeText;
