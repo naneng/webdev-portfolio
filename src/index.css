@@ -295,27 +295,27 @@ section {
   text-decoration: none;
 } */
 
-#portfolio {
+.portfolio {
   display: flex;
   flex-direction: column;
   margin: 10px 20px 20px 20px;
   /* width: 90vw; */
 }
 
-#portfolio a {
+.portfolio a {
   text-decoration: none;
   margin-right: 10px;
   color: #000;
 }
 
-#portfolio a:hover,
+.portfolio a:hover,
 .about a:hover {
   /* border-color: red; */
   color: var(--red);
   border-bottom: 0.1rem solid;
 }
 
-#portfolio .project:hover {
+.portfolio .project:hover {
   background-color: #a9c9ff;
   background-image: linear-gradient(170deg, var(--purple) 0%, var(--lblue) 90%);
   /* border: #000 solid; */
@@ -328,75 +328,61 @@ section {
   box-shadow: none;
 }
 
-#portfolio h1 {
-  /* margin:  40px; */
+.portfolio h1 {
   font-size: 50px;
   font-weight: 700;
 }
 
-#portfolio li {
+.portfolio li {
   display: inline;
 }
 
-#portfolio .show-filters {
-  /* display: none; */
+.portfolio .show-filters {
   margin-right: 15px;
   font-size: 1em;
   font-weight: 500;
+  pointer-events: none;
 }
 
-#portfolio .filters-list a.selected {
+.portfolio .filters-list a.selected {
   border-bottom: 3px solid var(--red);
 }
 
-#portfolio .w-100 {
+.portfolio .w-100 {
   margin: 20px;
 }
-#portfolio .w-200 {
+.portfolio .w-200 {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
-  height: 100px;
   margin: 20px;
 }
 
-#portfolio .w-25 {
+.portfolio .w-25 {
+  flex: 0 1 236px;
   border: #000 solid;
   background: #ecf0f3;
   padding: 10px;
   padding-left: 20px;
-  height: 100%;
-  /* font-size: 14px; */
   border-radius: 3px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
-#portfolio .svg-logo {
+.portfolio .svg-logo {
   margin-top: 150px;
   margin-bottom: 40px;
 }
 /*           ------portfolio end------              */
 
-/*         --contact--             */
+/*         ------------- contact-------------             */
 .contact {
-  /* position: relative; */
   margin: 0px auto;
-  /* height: 100%; */
-  /* width: 100%; */
-  max-height: 800px;
-  /* min-height: none; */
-  /* background-color:#6E07F3; */
+
   background-color: #a9c9ff;
   background-image: linear-gradient(
     190deg,
     var(--purple) 0%,
     var(--lblue) 100%
   );
-
-  /* background: #f4c4f3;  
-  background: -webkit-linear-gradient(to right, #AC73EF, #f4c4f3);  
-  background: linear-gradient(to left, #AC73EF, #f4c4f3);  */
-
   overflow: hidden;
 }
 
@@ -418,14 +404,16 @@ section {
 
 .contact .container .contact-form,
 .contact .container .contact-social {
-  width: 50%;
+  flex: 1;
   margin: 20px;
 }
 
 .contact .contact-form .app-form-group {
-  font-size: 14px;
+  /* font-size: 14px; */
   /* color: #fff; */
-  padding: 10px 0 10px 0;
+  /* padding: 10px 0 10px 0; */
+  /* width: 100%; */
+  margin: 10px auto;
 }
 
 input {
@@ -449,7 +437,7 @@ input[type="message"] {
   height: 90px;
   border-radius: 5px;
   border: 3px solid #fff;
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
 }
 
 .contact .contact-form input:focus {
@@ -498,7 +486,6 @@ button:hover {
 
 .contact .contact-social .contact-logo {
   margin: 10px auto;
-  /* padding: 0; */
   height: 65px;
   width: 150px;
 }
@@ -515,29 +502,16 @@ button:hover {
 
 .contact .contact-social .social a:hover {
   padding-top: 10px;
-  /* padding: 10px 10px 10px 0px; */
-  /* background-color: var(--red); */
-  /* width: 2rem; */
 }
-/* .contact .top-link {
-  width:  100%;
-} */
 
 .contact .copyright {
   margin-bottom: 0;
-  display: inline-block;
 }
 
 .contact .copyright p {
   text-align: center;
   font-size: 16px;
   padding: 10px 10px 0px 10px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 50%;
-  transform: translate(-50%, -50%);
-  /* z-index: 1; */
 }
 
 /*             --contact end--             */
@@ -555,17 +529,33 @@ button:hover {
     margin: 0;
   }
 
-  .contact .container {
-    flex-direction: column;
-    /* margin: 20px; */
-    /* max-width: 400px; */
-    /* justify-content: center; */
+  .portfolio {
+    align-items: center;
   }
 
-  .contact .container .contact-form,
-  .contact .container .contact-social {
-    width: 100%;
-    margin: 20px;
+  .portfolio .w-100 {
+    margin: 0;
+  }
+  .portfolio .w-200 {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    margin: 0px;
+  }
+
+  .portfolio .w-25 {
+    flex: 0 1 400px;
+    height: 36px;
+    /* border: #000 solid; */
+    /* background: #ecf0f3; */
+    padding: 10px;
+    padding-left: 0px;
+    /* border-radius: 3px; */
+  }
+
+  .contact .container {
+    flex-direction: column;
+    margin: 20px 30px;
   }
 }
 

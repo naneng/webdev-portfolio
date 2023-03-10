@@ -29,11 +29,11 @@ document.addEventListener("scroll", function () {
 
 // marquee and animatedTag transition animations >>>>
 function makeMarquee() {
-  const title = "   Get in Touch  ";
+  const title = "   ..Get..in..Touch..  ";
   // const img = document.createElement("img")
   // img.src = "hoagie-1.png"
   // document.getElementById("text-breaker").appendChild(img);
-  const marqueeText = new Array(100).fill(title).join("<{><}> ");
+  const marqueeText = new Array(100).fill(title).join("");
 
   const marquee = document.querySelector(".marquee span");
   marquee.innerHTML = marqueeText;
@@ -42,7 +42,7 @@ function makeMarquee() {
 makeMarquee();
 
 const animatedTags = document.querySelectorAll(
-  "h1, h2, h3, p, section img, nav, a.button, #my-form, header, a.marquee, a.js-scroll"
+  "h1, h3, p, section img, nav, a.button, #my-form, header, a.marquee, a.js-scroll"
 );
 
 // fade out on load
@@ -124,17 +124,6 @@ form.addEventListener("submit", handleSubmit);
 // portfolio animations
 
 //filter animations
-//const projectFilter = document.querySelector(".filters-list a");
-// const toggleFilter = function () {
-//   const filter = $(this).attr("data-filter");
-// };
-
-// toggleFilter();
-
-// document.addEventListener("click", function () {
-//   toggleFilter();
-// });
-
 const filterLanguages = document.querySelectorAll(".filters-list a");
 
 filterLanguages.forEach((language) => {
@@ -151,10 +140,6 @@ filterLanguages.forEach((language) => {
     const selectedProjects = document.querySelectorAll(filter);
     selectedProjects.forEach((project) => {
       project.style.display = "block";
-
-      // if (selectedProjects.length < 1) {
-      //   project.style.display = "none";
-      // }
     });
 
     filterLanguages.forEach((language) => {
@@ -162,6 +147,4 @@ filterLanguages.forEach((language) => {
     });
     language.classList.add("selected");
   });
-
-  // return false;
 });
